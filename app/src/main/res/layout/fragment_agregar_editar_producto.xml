@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments_admin.AgregarEditarProductoFragment"
+    android:background="@drawable/degradado_main_activity"
+    >
+    <TextView
+        android:id="@+id/aEProductoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Producto"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:layout_marginHorizontal="10dp"
+        style="@style/titulo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aEProductoNombreET"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_name"
+                android:hint="Nombre"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aEProductoDescripcionET"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_description"
+                android:hint="Descripción"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aEProductoPrecioET"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_producto"
+                android:hint="Producto"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aEProductoURLimgET"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:drawablePadding="16dp"
+                android:drawableStart="@drawable/ic_image"
+                android:hint="Imagen"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/agregarEditarProductoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_2"
+            android:textSize="20sp"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"
+            android:text="Agregar"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

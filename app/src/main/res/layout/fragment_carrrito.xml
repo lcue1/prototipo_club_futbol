@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.CarrritoFragment"
+    android:background="@drawable/degradado_main_activity"
+    android:layout_marginBottom="32dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tituloTienda"
+            style="@style/titulo"
+            android:layout_width="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_carrito"
+            app:layout_constraintEnd_toStartOf="@id/btn_regresar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_regresar"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_2"
+
+            android:src="@drawable/ic_atras1"
+            app:layout_constraintBottom_toBottomOf="@+id/tituloTienda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tituloTienda" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carritoRecycle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/detalleAPagar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloTienda"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detalleAPagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_pagar"
+            app:layout_constraintTop_toBottomOf="@id/carritoRecycle">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  android:padding="10dp"
+                    android:text="Detalle pago" />
+
+                <TextView
+                    android:id="@+id/cantida_productos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  android:padding="10dp"
+                    android:text="Cantidad de productos: : " />
+
+                <TextView
+                    android:id="@+id/precio_total_productos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Total a pagar: " />
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pagar"
+            android:layout_width="match_parent"
+            android:text="Pagar"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/back_2"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
