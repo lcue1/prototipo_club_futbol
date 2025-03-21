@@ -18,6 +18,7 @@ import com.example.club_futbol_1.Utils
 import com.example.club_futbol_1.databinding.FragmentAddNoticiaBinding
 import com.example.club_futbol_1.databinding.FragmentCarrritoBinding
 import com.example.club_futbol_1.model.Noticia
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
@@ -38,9 +39,8 @@ class AddNoticiaFragment : Fragment() {
     ): View? {
         _binding= FragmentAddNoticiaBinding.inflate(inflater,container,false)
         val noticiaEditar = arguments?.getParcelable<Noticia>("noticiaEditar")
-
         val editTexts = arrayOf(binding.tituloAddNoticiaET,binding.descripcionNoticiaET,binding.urlNoticiaET)
-        listenersEditEtexts(editTexts)
+        listenersEditEtexts(editTexts )
         if(noticiaEditar==null) {//Agrega la noticia
             binding.agregarEditarBtn.setOnClickListener {
                 val campoVacio = Utils.validarEditText(editTexts)
@@ -96,7 +96,7 @@ class AddNoticiaFragment : Fragment() {
 
     }
 
-    private fun listenersEditEtexts(editTexts:Array<EditText>) {
+    private fun listenersEditEtexts(editTexts:Array<TextInputEditText>) {
         for (et in editTexts) {//evento de edit text
             et.setOnFocusChangeListener { _, foco ->
                 if (!foco) {

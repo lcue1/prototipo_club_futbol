@@ -28,4 +28,7 @@
     <!--Item productos-->
     <string name="btnEditarProducto">Editar</string>
     <string name="btnEliminarProducto">X</string>
+
+
+    <string name="web_id_client">518764826382-54eippm5r1un0ttap2pamo5g586e58jo.apps.googleusercontent.com</string>
 </resources>

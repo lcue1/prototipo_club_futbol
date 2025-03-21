@@ -83,7 +83,7 @@ class   MainActivity : AppCompatActivity() {
 
     private fun registrarUsuario() {
         val configuracion = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("518764826382-54eippm5r1un0ttap2pamo5g586e58jo.apps.googleusercontent.com") // Reemplaza con tu client ID
+            .requestIdToken(getString(R.string.web_id_client)) // Reemplaza con tu client ID
             .requestEmail()
             .build()
         var googleSignInClient = GoogleSignIn.getClient(this, configuracion)
